@@ -1,0 +1,28 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 100px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.contacts__link {
+  position: relative;
+
+  padding: 15px 10px 15px 45px;
+
+  color: $color-alice-blue
+}
+
+.contacts__link-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 10px;
+
+  transform: translateY(-50%);
+}

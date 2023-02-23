@@ -1,0 +1,47 @@
+.btn {
+  display: inline-flex;
+
+  min-width: 50px;
+  padding: 10px 15px;
+
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-alice-blue;
+  letter-spacing: 0.05em;
+
+  background-color: $color-black-pearl;
+
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  &--border {
+    line-height: 16px;
+    border: 1px solid $color-alice-blue;
+  }
+
+  &--blue {
+    padding: 16px 26px;
+
+    font-size: 18px;
+    line-height: 21px;
+
+    background-color: $color-deep-sky-blue;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}

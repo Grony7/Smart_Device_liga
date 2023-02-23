@@ -1,0 +1,39 @@
+.main-block {
+  background-color: $color-black-pearl;
+  background-image: url("../img/main-block/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-block/background@2x.jpg");
+  }
+}
+
+.main-block__wrapper {
+  min-height: 880px;
+  padding: 305px 185px 200px;
+}
+
+.main-block__title {
+  margin: 0 0 32px;
+
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.main-block__text {
+  width: 685px;
+  margin: 0 0 46px;
+
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.main-block__button {
+  margin: 0;
+}

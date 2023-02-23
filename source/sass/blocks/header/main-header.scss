@@ -1,0 +1,31 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background: linear-gradient(180deg,
+    $color-black-pearl 84.9%,
+    rgba(4, 24, 39, 0) 100%);
+}
+
+.main-header__wrapper {
+  display: flex;
+  align-items: center;
+
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.main-header__logo-wrapper {
+  margin-right: 130px;
+}
+
+.main-header__contacts {
+  margin-left: 20px;
+}
+
+.main-header__button {
+  margin-left: auto;
+  margin-right: 62px;
+}

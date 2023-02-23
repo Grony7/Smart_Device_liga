@@ -12,6 +12,8 @@ body {
 }
 
 html {
+  min-width: 320px;
+
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;

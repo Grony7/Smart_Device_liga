@@ -431,6 +431,7 @@ body {
 }
 
 html {
+  min-width: 320px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -639,7 +640,6 @@ button,
 .container {
   width: 100%;
   max-width: 1340px;
-  min-width: 320px;
   margin: 0 auto;
   padding: 0 60px;
 }
@@ -650,7 +650,10 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 100px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 20px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -660,6 +663,15 @@ button,
   position: relative;
   padding: 15px 10px 15px 45px;
   color: #f2f5f7;
+  outline: none;
+}
+
+.contacts__link.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.contacts__link.focus-visible:active {
+  opacity: 0.5;
 }
 
 .contacts__link-icon {
@@ -688,21 +700,20 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 35px;
 }
 
-.main-header__logo-wrapper {
-  margin-right: 130px;
-}
-
 .main-header__contacts {
-  margin-left: 20px;
+  width: 100%;
+  max-width: 480px;
 }
 
 .main-header__button {
-  margin-left: auto;
-  margin-right: 62px;
+  margin-right: 5%;
 }
 
 .advantage-card {
@@ -766,7 +777,7 @@ button,
 }
 
 .main-block__text {
-  width: 685px;
+  max-width: 685px;
   margin: 0 0 46px;
   font-size: 22px;
   line-height: 34px;
@@ -776,7 +787,8 @@ button,
   margin: 0;
 }
 
-.main-container__main-block {
+.main-container__main-block,
+.main-container__advantages {
   margin-bottom: 120px;
 }
 
@@ -822,6 +834,10 @@ button,
 
 .btn.focus-visible:focus {
   opacity: 0.8;
+}
+
+.btn.focus-visible:active {
+  opacity: 0.5;
 }
 
 .modal {
@@ -1496,11 +1512,181 @@ button,
   .container {
     padding: 0 50px;
   }
+
+  .contacts {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+  }
+
+  .contacts__link {
+    display: inline-block;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 10px;
+  }
+
+  .contacts__link-icon {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .contacts__text {
+    display: none;
+  }
+
+  .main-header {
+    position: absolute;
+  }
+
+  .main-header__wrapper {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  .main-header__contacts {
+    width: auto;
+    margin-right: 20px;
+  }
+
+  .main-header__button {
+    display: none;
+  }
+
+  .advantage-card {
+    min-height: 360px;
+    padding: 40px 30px 30px 40px;
+  }
+
+  .advantage-card__icon {
+    margin: 0 0 10px;
+  }
+
+  .advantage-card__title {
+    margin: 0 0 5px;
+  }
+
+  .main-block {
+    background-image: url("../img/main-block/background-tablet.jpg");
+  }
+
+  .main-block__wrapper {
+    min-height: 640px;
+    padding-top: 180px;
+    padding-bottom: 60px;
+  }
+
+  .main-block__title {
+    margin: 0;
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  .main-block__text {
+    margin: 0 0 58px;
+  }
+
+  .main-block__button {
+    margin-left: 45px;
+  }
+
+  .main-container__main-block,
+  .main-container__advantages {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .main-block {
+    background-image: url("../img/main-block/background-tablet@2x.jpg");
+  }
 }
 
 @media (max-width: 767px) {
   .container {
     padding: 0 25px;
+  }
+
+  .main-header__wrapper {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .main-header__logo-wrapper img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .main-header__contacts {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .advantage-card {
+    min-height: 325px;
+    padding: 30px 30px 35px 25px;
+  }
+
+  .advantage-card__icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 0 10px;
+  }
+
+  .advantage-card__title {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantage-card__text {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .main-block {
+    background-image: url("../img/main-block/background-mobile.jpg");
+  }
+
+  .main-block__wrapper {
+    min-height: 560px;
+    padding-top: 150px;
+  }
+
+  .main-block__title {
+    margin: 0 0 8px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .main-block__text {
+    margin: 0 0 44px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .main-block__button {
+    margin: 0;
+  }
+
+  .main-container__main-block,
+  .main-container__advantages {
+    margin-bottom: 50px;
+  }
+
+  .btn--blue {
+    padding: 10px 30px;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   .modal__wrapper {
@@ -1514,6 +1700,12 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .main-block {
+    background-image: url("../img/main-block/background-mobile@2x.jpg");
   }
 }
 
@@ -1580,13 +1772,25 @@ button,
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .main-block {
-    background-image: url("../img/main-block/background@2x.jpg");
-  }
-}
-
 @media (hover: hover) {
+  .contacts__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .advantage-card:hover:not(.focus-visible) {
+    background-color: #00b2ff;
+    cursor: default;
+  }
+
+  .advantage-card:hover:not(.focus-visible) .advantage-card__icon {
+    fill: #f2f5f7;
+  }
+
+  .advantage-card:hover:not(.focus-visible) .advantage-card__title,
+  .advantage-card:hover:not(.focus-visible) .advantage-card__text {
+    color: #f2f5f7;
+  }
+
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
   }
@@ -1597,5 +1801,11 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .main-block {
+    background-image: url("../img/main-block/background@2x.jpg");
   }
 }

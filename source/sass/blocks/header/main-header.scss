@@ -2,30 +2,64 @@
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
 
   background: linear-gradient(180deg,
     $color-black-pearl 84.9%,
     rgba(4, 24, 39, 0) 100%);
+
+  @include vp-1023  {
+    position: absolute;
+  }
 }
 
 .main-header__wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   padding-top: 30px;
   padding-bottom: 35px;
+
+  @include vp-1023 {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
 }
 
-.main-header__logo-wrapper {
-  margin-right: 130px;
+.main-header__logo-wrapper img {
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+  }
 }
+
 
 .main-header__contacts {
-  margin-left: 20px;
+  width: 100%;
+  max-width: 480px;
+
+  @include vp-1023 {
+    width: auto;
+    margin-right: 20px;
+  }
+
+  @include vp-767 {
+    width: auto;
+    margin-right: 10px;
+  }
 }
 
 .main-header__button {
-  margin-left: auto;
-  margin-right: 62px;
+  margin-right: 5%;
+
+  @include vp-1023 {
+    display: none;
+  }
 }

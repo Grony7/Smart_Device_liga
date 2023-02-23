@@ -1,13 +1,18 @@
 .contacts {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
-  gap: 100px;
+  gap: 20px;
 
   padding: 0;
   margin: 0;
 
   list-style: none;
+
+  @include vp-1023 {
+    justify-content: end;
+  }
 }
 
 .contacts__link {
@@ -15,7 +20,25 @@
 
   padding: 15px 10px 15px 45px;
 
-  color: $color-alice-blue
+  color: $color-alice-blue;
+
+  outline: none;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
+
+  @include vp-1023  {
+    display: inline-block;
+
+    min-width: 40px;
+    min-height: 40px;
+    padding: 10px;
+  }
 }
 
 .contacts__link-icon {
@@ -25,4 +48,17 @@
   left: 10px;
 
   transform: translateY(-50%);
+
+  @include vp-1023 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.contacts__text {
+  @include vp-1023  {
+    display: none;
+
+  }
 }

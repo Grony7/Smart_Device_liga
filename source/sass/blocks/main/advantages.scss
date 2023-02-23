@@ -4,4 +4,8 @@
   gap: 30px;
 
   padding: 0;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
 }

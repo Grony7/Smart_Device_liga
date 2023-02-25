@@ -1,5 +1,6 @@
 .btn {
   display: inline-flex;
+  justify-content: center;
 
   min-width: 50px;
   padding: 10px 15px;
@@ -40,6 +41,19 @@
       font-size: 14px;
       line-height: 16px;
     }
+  }
+
+  &--white {
+    min-width: 180px;
+    padding: 14px 26px;
+
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-deep-sky-blue;
+
+    background-color: $color-alice-blue;
+
+    border: 1px solid $color-deep-sky-blue;
   }
 
   &:disabled {

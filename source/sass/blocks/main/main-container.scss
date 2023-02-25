@@ -1,5 +1,5 @@
 .main-container__main-block,
-.main-container__advantages {
+.main-container__advantages{
   margin-bottom: 120px;
 
   @include vp-1023 {
@@ -9,4 +9,8 @@
   @include vp-767 {
     margin-bottom: 50px;
   }
+}
+
+.main-container__about-company {
+  margin-bottom: 100px;
 }

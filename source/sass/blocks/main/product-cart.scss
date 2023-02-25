@@ -1,0 +1,136 @@
+.product-cart {
+  position: relative;
+
+  display: block;
+
+  min-height: 650px;
+  padding: 50px 40px;
+
+  color: $color-alice-blue;
+
+  background-color: $color-black-pearl;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include vp-1023 {
+    padding: 40px 45px;
+
+    min-height: 250px;
+  }
+
+  @include vp-767 {
+    padding: 30px;
+  }
+
+  &--production {
+    background-image: url("../../../img/products/production/background.jpg");
+
+    @include retina {
+      background-image: url("../../../img/products/production/background@2x.jpg");
+    }
+
+    @include vp-1023 {
+      background-image: url("../../../img/products/production/background-tablet.jpg");
+
+      @include retina {
+        background-image: url("../../../img/products/production/background-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-374{
+      background-image: url("../../../img/products/production/background-mobile.jpg");
+
+      @include retina {
+        background-image: url("../../../img/products/production/background-mobile@2x.jpg");
+      }
+    }
+  }
+
+  &--montage {
+    background-image: url("../../../img/products/montage/background.jpg");
+
+    @include retina {
+      background-image: url("../../../img/products/montage/background@2x.jpg");
+    }
+
+    @include vp-1023 {
+      background-image: url("../../../img/products/montage/background-tablet.jpg");
+
+      @include retina {
+        background-image: url("../../../img/products/montage/background-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-374{
+      background-image: url("../../../img/products/montage/background-mobile.jpg");
+
+      @include retina {
+        background-image: url("../../../img/products/montage/background-mobile@2x.jpg");
+      }
+    }
+  }
+
+  &--accessories {
+    background-image: url("../../../img/products/accessories/background.jpg");
+
+    @include retina {
+      background-image: url("../../../img/products/accessories/background@2x.jpg");
+    }
+
+    @include vp-1023 {
+      background-image: url("../../../img/products/accessories/background-tablet.jpg");
+
+      @include retina {
+        background-image: url("../../../img/products/accessories/background-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-374{
+      background-image: url("../../../img/products/accessories/background-mobile.jpg");
+
+      @include retina {
+        background-image: url("../../../img/products/accessories/background-mobile@2x.jpg");
+      }
+    }
+  }
+}
+
+.product-cart__title {
+  max-width: 190px;
+  margin: 0;
+
+  font-family: $font-roboto-condensed;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.product-cart__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  min-width: 60px;
+  min-height: 60px;
+
+  background-color: $color-deep-sky-blue;
+
+  @include vp-767{
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+.product-cart__icon-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}

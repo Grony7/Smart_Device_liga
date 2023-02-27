@@ -43,6 +43,21 @@
   <h1 class="visually-hidden"> Магазин Smart Device</h1>
 
   <section class="main-container__main-block main-block">
+    <picture>
+      <source type="image/webp" media="(max-width: 787px)"
+              srcset="img/main-block/background-mobile.webp, img/main-block/background-mobile@2x.webp 2x">
+      <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/main-block/background-tablet.webp, img/main-block/background-tablet@2x.webp 2x">
+      <source type="image/webp" srcset="img/main-block/background.webp, img/main-block/background@2x.webp 2x">
+
+      <source media="(max-width: 787px)"
+              srcset="img/main-block/background-mobile.jpg, img/main-block/background-mobile@2x.jpg 2x">
+      <source media="(max-width: 1023px)"
+              srcset="img/main-block/background-tablet.jpg, img/main-block/background-tablet@2x.jpg 2x">
+      <img class="main-container__background background-image" role="presentation" width="1920" height="880"
+           src="img/main-block/background.jpg"
+           srcset="img/main-block/background.jpg, img/main-block/background@2x.jpg 2x">
+    </picture>
     <div class="main-block__wrapper container">
       <h2 class="main-block__title">Печатные платы</h2>
       <p class="main-block__text">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
@@ -103,6 +118,14 @@
   <section class="main-container__about-company about-company">
     <div class="about-company__wrapper container">
       <div class="about-company__content-wrapper">
+        <picture>
+          <source type="image/webp"
+                  srcset="img/2022/background.webp, img/2022/background@2x.webp 2x">
+          <img class="about-company__image" width="150" height="320" alt="2022"
+               src="img/2022/background.png"
+               srcset="img/2022/background.png, img/2022/background@2x.png 2x">
+        </picture>
+
         <h2 class="about-company__title">О компании</h2>
         <div class="about-company__text">
           <p class="about-company__text-paragraph">
@@ -111,8 +134,10 @@
           </p>
 
           <p class="about-company__text-paragraph">
-            Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-            Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог
+            Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+            REFOND.
+            Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных
+            Дорог
             (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
             светотехники России.
           </p>
@@ -127,38 +152,123 @@
       <h2 class="products__title">Smart Device предлагает следующие товары и услуги</h2>
       <ul class="products__list">
         <li class="products__item">
-          <a class="products__product-cart product-cart product-cart--production" href="#">
-            <h3 class="product-cart__title">Производство печатных&nbsp;плат</h3>
-            <div class="product-cart__button">
-              <svg class="product-cart__icon-arrow" aria-hidden="true" focusable="false" width="4" height="8">
-                <use xlink:href="img/sprite.svg#icon-arrow"/>
-              </svg>
+          <a class="products__product-cart product-cart" href="#">
+            <div class="product-cart__wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 373px)"
+                        srcset="img/products/production/background-mobile.webp, img/products/production/background-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/products/production/background-tablet.webp, img/products/production/background-tablet@2x.webp 2x">
+                <source type="image/webp"
+                        srcset="img/products/production/background.webp, img/products/production/background@2x.webp 2x">
+
+                <source media="(max-width: 373px)"
+                        srcset="img/products/production/background-mobile.jpg, img/products/production/background-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                        srcset="img/products/production/background-tablet.jpg, img/products/production/background-tablet@2x.jpg 2x">
+                <img class="product-cart__background background-image" role="presentation" width="350" height="650" alt="печатная плата"
+                     src="img/products/production/background.jpg"
+                     srcset="img/products/production/background.jpg, img/products/production/background@2x.jpg 2x">
+              </picture>
+              <h3 class="product-cart__title">Производство печатных&nbsp;плат</h3>
+              <div class="product-cart__button">
+                <svg class="product-cart__icon-arrow" aria-hidden="true" focusable="false" width="4" height="8">
+                  <use xlink:href="img/sprite.svg#icon-arrow"/>
+                </svg>
+              </div>
             </div>
           </a>
         </li>
 
         <li class="products__item">
-          <a class="products__product-cart product-cart product-cart--montage" href="#">
-            <h3 class="product-cart__title">Монтаж печатных плат</h3>
-            <div class="product-cart__button">
-              <svg class="product-cart__icon-arrow" aria-hidden="true" focusable="false" width="4" height="8">
-                <use xlink:href="img/sprite.svg#icon-arrow"/>
-              </svg>
+          <a class="products__product-cart product-cart" href="#">
+            <div class="product-cart__wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 373px)"
+                        srcset="img/products/montage/background-mobile.webp, img/products/montage/background-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/products/montage/background-tablet.webp, img/products/montage/background-tablet@2x.webp 2x">
+                <source type="image/webp"
+                        srcset="img/products/montage/background.webp, img/products/montage/background@2x.webp 2x">
+
+                <source media="(max-width: 373px)"
+                        srcset="img/products/montage/background-mobile.jpg, img/products/montage/background-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                        srcset="img/products/montage/background-tablet.jpg, img/products/montage/background-tablet@2x.jpg 2x">
+                <img class="product-cart__background background-image" role="presentation" width="350" height="650" alt="печатная плата"
+                     src="img/products/montage/background.jpg"
+                     srcset="img/products/montage/background.jpg, img/products/montage/background@2x.jpg 2x">
+              </picture>
+              <h3 class="product-cart__title">Монтаж печатных плат</h3>
+              <div class="product-cart__button">
+                <svg class="product-cart__icon-arrow" aria-hidden="true" focusable="false" width="4" height="8">
+                  <use xlink:href="img/sprite.svg#icon-arrow"/>
+                </svg>
+              </div>
             </div>
           </a>
         </li>
 
         <li class="products__item">
           <a class="products__product-cart product-cart product-cart--accessories" href="#">
-            <h3 class="product-cart__title">Комплектующие для&nbsp;светотехники</h3>
-            <div class="product-cart__button">
-              <svg class="product-cart__icon-arrow" aria-hidden="true" focusable="false" width="4" height="8">
-                <use xlink:href="img/sprite.svg#icon-arrow"/>
-              </svg>
+            <div class="product-cart__wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 373px)"
+                        srcset="img/products/accessories/background-mobile.webp, img/products/accessories/background-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/products/accessories/background-tablet.webp, img/products/accessories/background-tablet@2x.webp 2x">
+                <source type="image/webp"
+                        srcset="img/products/accessories/background.webp, img/products/accessories/background@2x.webp 2x">
+
+                <source media="(max-width: 373px)"
+                        srcset="img/products/accessories/background-mobile.jpg, img/products/accessories/background-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                        srcset="img/products/accessories/background-tablet.jpg, img/products/accessories/background-tablet@2x.jpg 2x">
+                <img class="product-cart__background background-image" role="presentation" width="350" height="650" alt="печатная плата"
+                     src="img/products/accessories/background.jpg"
+                     srcset="img/products/accessories/background.jpg, img/products/accessories/background@2x.jpg 2x">
+              </picture>
+              <h3 class="product-cart__title">Комплектующие для&nbsp;светотехники</h3>
+              <div class="product-cart__button">
+                <svg class="product-cart__icon-arrow" aria-hidden="true" focusable="false" width="4" height="8">
+                  <use xlink:href="img/sprite.svg#icon-arrow"/>
+                </svg>
+              </div>
             </div>
           </a>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section class="main-container__feedback feedback">
+    <div class="feedback__wrapper container">
+      <img class="feedback__image" width="510" height="285" src="img/svg/paper-airplane.svg" aria-hidden="true" alt="бумажный самолетик">
+      <div class="feedback__content-wrapper">
+        <h2 class="feedback__wrapper__title">Остались вопросы? Задайте их нам!</h2>
+        <p class="feedback__wrapper__text">Мы проконсультируем Вас бесплатно</p>
+
+        <form class="feedback__form form">
+          <div class="form__field">
+            <input type="text" placeholder="Имя" aria-label="Имя" required>
+          </div>
+          <div class="form__field">
+            <input type="tel" placeholder="Телефон" aria-label="Телефон" required>
+          </div>
+          <div class="form__textarea">
+            <textarea placeholder="Ваш вопрос" aria-label="Ваш вопрос" required></textarea>
+          </div>
+
+          <button class="form__button btn">Задать вопрос</button>
+          <div class="form__checkbox">
+            <label>
+              <input type="checkbox" required>
+              <span class="form__custom-checkbox"></span>
+              Я согласен на обработку персональных данных
+            </label>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 </main>

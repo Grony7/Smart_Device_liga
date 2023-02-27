@@ -13,4 +13,8 @@
 
 .main-container__about-company {
   margin-bottom: 100px;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
 }

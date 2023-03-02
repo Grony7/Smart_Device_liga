@@ -23,10 +23,15 @@
   top: 50%;
   left: 50%;
 
+  fill: $color-default-white;
 
   transform: translate(-50%, -50%);
 
   @include hover-focus {
     fill: $color-deep-sky-blue;
+  }
+
+  @include active {
+    opacity: 0.5;
   }
 }

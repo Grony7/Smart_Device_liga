@@ -1087,6 +1087,7 @@ button,
   position: absolute;
   top: 50%;
   left: 50%;
+  fill: #ffffff;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -1094,6 +1095,10 @@ button,
 
 .social-network__icon.focus-visible:focus {
   fill: #00b2ff;
+}
+
+.social-network__icon.focus-visible:active {
+  opacity: 0.5;
 }
 
 .main-footer {

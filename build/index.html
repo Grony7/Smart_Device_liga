@@ -283,7 +283,7 @@
 </main>
 
 <footer class="main-footer">
-  <div class="main-footer__wrapper container">
+  <div class="main-footer__wrapper container" data-accordion="parent" data-destroy="(max-width: 767px)">
     <div class="main-footer__social-wrapper">
       <img class="main-footer__logo" width="215" height="55" alt="Логотип" src="img/logo/logo.svg">
       <ul class="main-footer__social-network social-network">
@@ -314,9 +314,9 @@
       </ul>
     </div>
 
-    <div class="main-footer__site-sections site-sections">
-      <h2 class="site-sections__title">Разделы сайта</h2>
-      <ul class="site-sections__list">
+    <div class="main-footer__site-sections site-sections" data-accordion="element">
+      <h2 class="site-sections__title" data-accordion="button">Разделы сайта</h2>
+      <ul class="site-sections__list" data-accordion="content">
         <li class="site-sections__item">
           <a class="site-sections__link" href="#">
             О Компании
@@ -356,20 +356,22 @@
     </div>
 
     <div class="main-footer__contacts contacts">
-      <address class="contacts__wrapper">
-        <h2 class="contacts__title">Наш офис</h2>
-        <p class="contacts__address">г. Мытищи, Олимпийский проспект, д.10</p>
-        <ul class="contacts__list">
-          <li class="contacts__phone-number">
-            <a class="contacts__phone-number-link" href="tel:+74955894050">+7 (495) 589-40-50</a>
-          </li>
-          <li class="contacts__phone-number">
-            <a class="contacts__phone-number-link" href="tel:+79253895829">+7 (925) 389-58-29</a>
-          </li>
-          <li class="contacts__phone-number">
-            <a class="contacts__phone-number-link" href="tel:+79253647813">+7 (925) 364-78-13</a>
+      <address class="contacts__wrapper" data-accordion="element">
+        <h2 class="contacts__title" data-accordion="button">Наш офис</h2>
+        <div class="contacts__content-wrapper" data-accordion="content">
+          <p class="contacts__address">г. Мытищи, Олимпийский проспект, д.10</p>
+          <ul class="contacts__list">
+            <li class="contacts__phone-number">
+              <a class="contacts__phone-number-link" href="tel:+74955894050">+7 (495) 589-40-50</a>
             </li>
-        </ul>
+            <li class="contacts__phone-number">
+              <a class="contacts__phone-number-link" href="tel:+79253895829">+7 (925) 389-58-29</a>
+            </li>
+            <li class="contacts__phone-number">
+              <a class="contacts__phone-number-link" href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </li>
+          </ul>
+        </div>
       </address>
     </div>
   </div>

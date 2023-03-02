@@ -384,6 +384,57 @@ template {
   display: none;
 }
 
+.accordion {
+  margin: 0 auto 50px auto;
+}
+
+.accordion .accordion {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.accordion__element:last-child {
+  margin-bottom: 0;
+}
+
+.accordion__element {
+  margin-bottom: 34px;
+  padding: 10px;
+}
+
+.accordion__element.is-active > .accordion__button {
+  opacity: 0.5;
+}
+
+.accordion__button {
+  width: 100%;
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.accordion__wrapper {
+  padding: 10px;
+}
+
+[data-accordion=element].is-active > [data-accordion=content] {
+  max-height: 100%;
+}
+
+[data-accordion=parent].no-transition [data-accordion=content] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-accordion=content] {
+  max-height: 0;
+  -webkit-transition: max-height 0.3s;
+  -o-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "PT Mono";
   src: url("../../fonts/PTMono.woff2") format("woff2"), url("../../fonts/PTMono.woff") format("woff");
@@ -982,6 +1033,10 @@ button,
   margin-bottom: 100px;
 }
 
+.contacts {
+  padding-top: 5px;
+}
+
 .contacts__title {
   margin: 0 0 20px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -997,6 +1052,7 @@ button,
 }
 
 .contacts__address {
+  margin: 0 0 10px;
   font-size: 16px;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
@@ -1010,7 +1066,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -1028,6 +1084,10 @@ button,
 
 .contacts__phone-number-link.focus-visible:active {
   color: #ffffff;
+}
+
+.site-sections {
+  padding-top: 5px;
 }
 
 .site-sections__title {
@@ -1071,7 +1131,7 @@ button,
   display: flex;
   gap: 15px;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 10px;
   list-style: none;
 }
 
@@ -1979,6 +2039,62 @@ button,
   }
 */
 
+@media (max-width: 1279px) {
+  .site-sections__link {
+    margin-bottom: 5px;
+  }
+
+  .main-footer {
+    padding: 50px 0 65px;
+  }
+
+  .main-footer__wrapper {
+    -ms-grid-columns: 1fr 28px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto 32px auto;
+    grid-template-areas: "social-wrapper social-wrapper" "site-sections contacts ";
+    gap: 32px 28px;
+  }
+
+  .main-footer__social-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .main-footer__social-network {
+    margin: 5px 0 auto;
+  }
+
+  .main-footer__site-sections {
+    margin: 0 0 0 auto;
+  }
+
+  .main-footer__social-wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .main-footer__site-sections {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .main-footer__contacts {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+
+  .main-footer__logo {
+    margin: 0;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 50px;
@@ -2282,6 +2398,53 @@ button,
   .main-container__main-block,
   .main-container__advantages {
     margin-bottom: 50px;
+  }
+
+  .site-sections__title {
+    display: inline-block;
+    padding: 20px 75px 20px 25px;
+  }
+
+  .main-footer {
+    padding: 34px 0;
+  }
+
+  .main-footer__wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto 0 auto 0 auto;
+    grid-template-areas: "social-wrapper" "site-sections" "contacts ";
+    gap: 0;
+  }
+
+  .main-footer__social-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .main-footer__social-wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .main-footer__site-sections {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .main-footer__contacts {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
   }
 
   .form__textarea textarea {

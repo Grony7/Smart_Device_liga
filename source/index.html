@@ -61,7 +61,7 @@
     <div class="main-block__wrapper container">
       <h2 class="main-block__title">Печатные платы</h2>
       <p class="main-block__text">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-      <a class="main-block__button btn btn--blue">Получить бесплатную консультацию</a>
+      <button class="main-block__button btn btn--blue">Получить бесплатную консультацию</button>
     </div>
   </section>
 
@@ -166,7 +166,8 @@
                         srcset="img/products/production/background-mobile.jpg, img/products/production/background-mobile@2x.jpg 2x">
                 <source media="(max-width: 1023px)"
                         srcset="img/products/production/background-tablet.jpg, img/products/production/background-tablet@2x.jpg 2x">
-                <img class="product-cart__background background-image" role="presentation" width="350" height="650" alt="печатная плата"
+                <img class="product-cart__background background-image" role="presentation" width="350" height="650"
+                     alt="печатная плата"
                      src="img/products/production/background.jpg"
                      srcset="img/products/production/background.jpg, img/products/production/background@2x.jpg 2x">
               </picture>
@@ -195,7 +196,8 @@
                         srcset="img/products/montage/background-mobile.jpg, img/products/montage/background-mobile@2x.jpg 2x">
                 <source media="(max-width: 1023px)"
                         srcset="img/products/montage/background-tablet.jpg, img/products/montage/background-tablet@2x.jpg 2x">
-                <img class="product-cart__background background-image" role="presentation" width="350" height="650" alt="печатная плата"
+                <img class="product-cart__background background-image" role="presentation" width="350" height="650"
+                     alt="печатная плата"
                      src="img/products/montage/background.jpg"
                      srcset="img/products/montage/background.jpg, img/products/montage/background@2x.jpg 2x">
               </picture>
@@ -224,7 +226,8 @@
                         srcset="img/products/accessories/background-mobile.jpg, img/products/accessories/background-mobile@2x.jpg 2x">
                 <source media="(max-width: 1023px)"
                         srcset="img/products/accessories/background-tablet.jpg, img/products/accessories/background-tablet@2x.jpg 2x">
-                <img class="product-cart__background background-image" role="presentation" width="350" height="650" alt="печатная плата"
+                <img class="product-cart__background background-image" role="presentation" width="350" height="650"
+                     alt="печатная плата"
                      src="img/products/accessories/background.jpg"
                      srcset="img/products/accessories/background.jpg, img/products/accessories/background@2x.jpg 2x">
               </picture>
@@ -243,7 +246,13 @@
 
   <section class="main-container__feedback feedback">
     <div class="feedback__wrapper container">
-      <img class="feedback__image" width="510" height="285" src="img/svg/paper-airplane.svg" aria-hidden="true" alt="бумажный самолетик">
+      <picture>
+        <source type="image/webp"
+                srcset="img/feedback-image/paper-airplane.webp, img/feedback-image/paper-airplane@2x.webp 2x">
+        <img class="feedback__image" width="510" height="285" alt="2022"
+             src="img/feedback-image/paper-airplane.png"
+             srcset="img/feedback-image/paper-airplane.png, img/feedback-image/paper-airplane@2x.png 2x">
+      </picture>
       <div class="feedback__content-wrapper">
         <h2 class="feedback__wrapper__title">Остались вопросы? Задайте их нам!</h2>
         <p class="feedback__wrapper__text">Мы проконсультируем Вас бесплатно</p>
@@ -272,6 +281,99 @@
     </div>
   </section>
 </main>
+
+<footer class="main-footer">
+  <div class="main-footer__wrapper container">
+    <div class="main-footer__social-wrapper">
+      <img class="main-footer__logo" width="215" height="55" alt="Логотип" src="img/logo/logo.svg">
+      <ul class="main-footer__social-network social-network">
+        <li class="social-network__item">
+          <a class="social-network__link" href="#">
+            <svg class="social-network__icon" aria-hidden="true" focusable="false" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-ok"/>
+            </svg>
+            <span class="visually-hidden">Ссылка на одноклассники</span>
+          </a>
+        </li>
+        <li class="social-network__item">
+          <a class="social-network__link" href="#">
+            <svg class="social-network__icon" aria-hidden="true" focusable="false" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-vk"/>
+            </svg>
+            <span class="visually-hidden">Ссылка на вконтакте</span>
+          </a>
+        </li>
+        <li class="social-network__item">
+          <a class="social-network__link" href="#">
+            <svg class="social-network__icon" aria-hidden="true" focusable="false" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+            </svg>
+            <span class="visually-hidden">Ссылка на пинтестер</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-footer__site-sections site-sections">
+      <h2 class="site-sections__title">Разделы сайта</h2>
+      <ul class="site-sections__list">
+        <li class="site-sections__item">
+          <a class="site-sections__link" href="#">
+            О Компании
+          </a>
+        </li>
+        <li class="site-sections__item">
+          <a class="site-sections__link" href="#">
+            Продукты
+          </a>
+        </li>
+        <li class="site-sections__item">
+          <a class="site-sections__link" href="#">
+            Производство печатных плат
+          </a>
+        </li>
+        <li class="site-sections__item">
+          <a class="site-sections__link" href="#">
+            Монтаж печатных плат
+          </a>
+        </li>
+        <li class="site-sections__item">
+          <a class="site-sections__link" href="#">
+            Комплектующие
+          </a>
+        </li>
+        <li class="site-sections__item">
+          <a class="site-sections__link" href="#">
+            Доставка
+          </a>
+        </li>
+        <li class="site-sections__item">
+          <a class="site-sections__link" href="#">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-footer__contacts contacts">
+      <address class="contacts__wrapper">
+        <h2 class="contacts__title">Наш офис</h2>
+        <p class="contacts__address">г. Мытищи, Олимпийский проспект, д.10</p>
+        <ul class="contacts__list">
+          <li class="contacts__phone-number">
+            <a class="contacts__phone-number-link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+          </li>
+          <li class="contacts__phone-number">
+            <a class="contacts__phone-number-link" href="tel:+79253895829">+7 (925) 389-58-29</a>
+          </li>
+          <li class="contacts__phone-number">
+            <a class="contacts__phone-number-link" href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </li>
+        </ul>
+      </address>
+    </div>
+  </div>
+</footer>
 
 <script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>

@@ -1,0 +1,38 @@
+.site-sections__title {
+  margin: 0 0 20px;
+
+  font-family: $font-roboto-condensed;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.site-sections__list {
+  padding: 0;
+  margin: 0;
+
+  columns: 220px 2;
+  gap: 30px;
+
+  list-style: none;
+}
+
+.site-sections__link {
+  display: inline-block;
+
+  width: 220px;
+  margin-bottom: 10px;
+
+  color: rgba($color-default-white, 0.7);
+
+  @include hover-focus {
+    color: $color-deep-sky-blue;
+  }
+
+  @include active {
+    color: $color-default-white;
+  }
+}

@@ -1,0 +1,28 @@
+.main-footer {
+  padding: 50px 0;
+
+  background-color: $color-black-pearl;
+}
+
+.main-footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(30px, 160px) 470px 30px 345px;
+  grid-template-areas: 'social-wrapper . site-sections . contacts ';
+}
+
+.main-footer__social-wrapper {
+  min-width: 215px;
+  grid-area: social-wrapper;
+}
+
+.main-footer__site-sections {
+  grid-area: site-sections;
+}
+
+.main-footer__contacts {
+  grid-area: contacts ;
+}
+
+.main-footer__logo {
+  margin: 0 0 30px;
+}

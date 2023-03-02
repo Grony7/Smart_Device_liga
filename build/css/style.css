@@ -743,7 +743,8 @@ button,
 
 .feedback__content-wrapper {
   position: relative;
-  padding-left: 630px;
+  width: 580px;
+  margin: 0 10px 0 auto;
   z-index: 1;
 }
 
@@ -981,6 +982,156 @@ button,
   margin-bottom: 100px;
 }
 
+.contacts__title {
+  margin: 0 0 20px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contacts__wrapper {
+  font-style: normal;
+}
+
+.contacts__address {
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contacts__phone-number-link {
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contacts__phone-number-link.focus-visible:focus {
+  color: #00b2ff;
+}
+
+.contacts__phone-number-link.focus-visible:active {
+  color: #ffffff;
+}
+
+.site-sections__title {
+  margin: 0 0 20px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.site-sections__list {
+  padding: 0;
+  margin: 0;
+  -webkit-columns: 220px 2;
+  -moz-columns: 220px 2;
+  columns: 220px 2;
+  gap: 30px;
+  list-style: none;
+}
+
+.site-sections__link {
+  display: inline-block;
+  width: 220px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.site-sections__link.focus-visible:focus {
+  color: #00b2ff;
+}
+
+.site-sections__link.focus-visible:active {
+  color: #ffffff;
+}
+
+.social-network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social-network__link {
+  position: relative;
+  display: inline-block;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 5px;
+}
+
+.social-network__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.social-network__icon.focus-visible:focus {
+  fill: #00b2ff;
+}
+
+.main-footer {
+  padding: 50px 0;
+  background-color: #041827;
+}
+
+.main-footer__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr minmax(30px, 160px) 470px 30px 345px;
+  grid-template-columns: 1fr minmax(30px, 160px) 470px 30px 345px;
+  grid-template-areas: "social-wrapper . site-sections . contacts ";
+}
+
+.main-footer__social-wrapper {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  min-width: 215px;
+  grid-area: social-wrapper;
+}
+
+.main-footer__site-sections {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: site-sections;
+}
+
+.main-footer__contacts {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: contacts;
+}
+
+.main-footer__logo {
+  margin: 0 0 30px;
+}
+
 .form__field input,
 .form__textarea textarea {
   width: 100%;
@@ -1119,6 +1270,19 @@ button,
   transition: opacity 0.3s ease;
 }
 
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.btn.focus-visible:active {
+  opacity: 0.5;
+}
+
 .btn--border {
   padding: 10px 15px;
   font-size: 14px;
@@ -1140,19 +1304,6 @@ button,
   color: #00b2ff;
   background-color: #f2f5f7;
   border: 1px solid #00b2ff;
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.btn.focus-visible:focus {
-  opacity: 0.8;
-}
-
-.btn.focus-visible:active {
-  opacity: 0.5;
 }
 
 .modal {
@@ -1878,7 +2029,8 @@ button,
   }
 
   .feedback__content-wrapper {
-    padding: 0;
+    width: auto;
+    margin: 0;
   }
 
   .feedback__image {
@@ -2231,6 +2383,18 @@ button,
   .advantage-card:hover:not(.focus-visible) .advantage-card__title,
   .advantage-card:hover:not(.focus-visible) .advantage-card__text {
     color: #f2f5f7;
+  }
+
+  .contacts__phone-number-link:hover:not(.focus-visible) {
+    color: #00b2ff;
+  }
+
+  .site-sections__link:hover:not(.focus-visible) {
+    color: #00b2ff;
+  }
+
+  .social-network__icon:hover:not(.focus-visible) {
+    fill: #00b2ff;
   }
 
   .btn:hover:not(.focus-visible) {

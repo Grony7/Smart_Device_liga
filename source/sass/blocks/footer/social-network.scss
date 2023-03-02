@@ -1,0 +1,32 @@
+.social-network {
+  display: flex;
+  gap: 15px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.social-network__link {
+  position: relative;
+
+  display: inline-block;
+
+  min-width: 40px;
+  min-height: 40px;
+  padding: 5px;
+}
+
+.social-network__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+
+  transform: translate(-50%, -50%);
+
+  @include hover-focus {
+    fill: $color-deep-sky-blue;
+  }
+}

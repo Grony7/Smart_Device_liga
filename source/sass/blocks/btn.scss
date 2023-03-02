@@ -23,6 +23,21 @@
 
   transition: opacity $trans-default;
 
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
+
+
   &--border {
     padding: 10px 15px;
 
@@ -58,19 +73,5 @@
     background-color: $color-alice-blue;
 
     border: 1px solid $color-deep-sky-blue;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
-
-  @include active {
-    opacity: 0.5;
   }
 }

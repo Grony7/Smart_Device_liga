@@ -1,37 +1,39 @@
-name: Deploy to GitHub-Pages
+name: gh-pages
 
 on:
   push:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
-    name: Deploy
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Check Out
+        uses: actions/checkout@v2.4.0
         with:
           persist-credentials: false
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: '16.x'
 
-      - name: Install dependencies
+      - name: Installing Dependencies
         run: npm ci
 
-      - name: Run checks
+      - name: Linting
         run: npm run lint
 
-      - name: Build project
+      - name: Building
         run: npm run build
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           folder: ./build

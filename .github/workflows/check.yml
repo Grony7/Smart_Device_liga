@@ -1,20 +1,21 @@
-name: Deploy to GitHub-Pages
+name: Project check
 
 on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - '*'
 
 jobs:
-  deploy:
-    name: Deploy
+  check:
+    name: Check
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -26,13 +27,4 @@ jobs:
 
       - name: Run checks
         run: npm run lint
-
-      - name: Build project
-        run: npm run build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          folder: ./build
-          branch: gh-pages
+        

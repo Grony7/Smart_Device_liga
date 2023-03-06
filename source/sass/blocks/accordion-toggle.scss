@@ -1,0 +1,54 @@
+.accordion-toggle {
+  display: none;
+}
+
+@include vp-767 {
+
+  .accordion-toggle {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    z-index: 1;
+    display: block;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 2px;
+
+      background-color: $color-default-white;
+      transform-origin: center;
+      transition: width 300ms;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  .is-active .accordion-toggle {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: $color-default-white;
+    }
+  }
+}

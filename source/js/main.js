@@ -1,6 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {adaptability} from './modules/adaptive';
+import {statusOfAboutButton} from './modules/about-company-button.js';
 
 // ---------------------------------
 
@@ -10,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  adaptability();
 
   // Modules
   // ---------------------------------
@@ -21,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    statusOfAboutButton();
   });
 });
 

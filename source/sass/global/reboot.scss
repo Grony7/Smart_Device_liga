@@ -21,6 +21,8 @@ html {
   font-family: "PT Mono", "Arial", sans-serif;
   color: $color-default-white;
 
+  scroll-behavior: smooth;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки

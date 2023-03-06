@@ -61,7 +61,7 @@
     <div class="main-block__wrapper container">
       <h2 class="main-block__title">Печатные платы</h2>
       <p class="main-block__text">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-      <button class="main-block__button btn btn--blue">Получить бесплатную консультацию</button>
+      <a class="main-block__button btn btn--blue" href="#feedback" id="main-block-button">Получить бесплатную консультацию</a>
     </div>
   </section>
 
@@ -116,8 +116,8 @@
   </section>
 
   <section class="main-container__about-company about-company">
-    <div class="about-company__wrapper container">
-      <div class="about-company__content-wrapper">
+    <div class="about-company__wrapper container" data-accordion="parent">
+      <div class="about-company__content-wrapper" data-accordion="element">
         <picture>
           <source type="image/webp"
                   srcset="img/2022/background.webp, img/2022/background@2x.webp 2x">
@@ -127,29 +127,44 @@
         </picture>
 
         <h2 class="about-company__title">О компании</h2>
-        <div class="about-company__text">
-          <p class="about-company__text-paragraph">
+        <div class="about-company__text" >
+          <p>
             Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
             технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
           </p>
 
-          <p class="about-company__text-paragraph">
+          <p id="about-company-text-wrapper">
             Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
             REFOND.
-            Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных
+            <span class="js-desktop-version" id="about-company-adaptive-text">
+              Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных
             Дорог
             (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
-            светотехники России.
+              светотехники России.
+            </span>
           </p>
+          <div class="about-company__accordion-wrapper" id="about-company-accordion-wrapper" data-accordion="content">
+            <p>
+              Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов,
+              70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более
+              14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
+            </p>
+            <p>
+              Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой
+              внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших
+              клиентов
+            </p>
+          </div>
+
         </div>
-        <button class="about-company__button btn btn--white">Подробнее</button>
+        <button class="about-company__button btn btn--white" id="about-company-button" data-accordion="button">Подробнее</button>
       </div>
     </div>
   </section>
 
   <section class="main-container__products products">
     <div class="products__wrapper container">
-      <h2 class="products__title">Smart Device предлагает следующие товары и услуги</h2>
+      <h2 class="products__title" id="product-title">Smart Device предлагает следующие товары и услуги</h2>
       <ul class="products__list">
         <li class="products__item">
           <a class="products__product-cart product-cart" href="#">
@@ -201,7 +216,7 @@
                      src="img/products/montage/background.jpg"
                      srcset="img/products/montage/background.jpg, img/products/montage/background@2x.jpg 2x">
               </picture>
-              <h3 class="product-cart__title">Монтаж печатных плат</h3>
+              <h3 class="product-cart__title">Монтаж <br> печатных плат</h3>
               <div class="product-cart__button">
                 <svg class="product-cart__icon-arrow" aria-hidden="true" focusable="false" width="4" height="8">
                   <use xlink:href="img/sprite.svg#icon-arrow"/>
@@ -244,7 +259,7 @@
     </div>
   </section>
 
-  <section class="main-container__feedback feedback">
+  <section class="main-container__feedback feedback" id="feedback">
     <div class="feedback__wrapper container">
       <picture>
         <source type="image/webp"
@@ -283,7 +298,7 @@
 </main>
 
 <footer class="main-footer">
-  <div class="main-footer__wrapper container" data-accordion="parent" data-destroy="(max-width: 767px)">
+  <div class="main-footer__wrapper container" data-accordion="parent" data-destroy="(max-width: 767px)" data-single>
     <div class="main-footer__social-wrapper">
       <img class="main-footer__logo" width="215" height="55" alt="Логотип" src="img/logo/logo.svg">
       <ul class="main-footer__social-network social-network">
@@ -316,48 +331,52 @@
 
     <div class="main-footer__site-sections site-sections" data-accordion="element">
       <h2 class="site-sections__title" data-accordion="button">Разделы сайта</h2>
-      <ul class="site-sections__list" data-accordion="content">
-        <li class="site-sections__item">
-          <a class="site-sections__link" href="#">
-            О Компании
-          </a>
-        </li>
-        <li class="site-sections__item">
-          <a class="site-sections__link" href="#">
-            Продукты
-          </a>
-        </li>
-        <li class="site-sections__item">
-          <a class="site-sections__link" href="#">
-            Производство печатных плат
-          </a>
-        </li>
-        <li class="site-sections__item">
-          <a class="site-sections__link" href="#">
-            Монтаж печатных плат
-          </a>
-        </li>
-        <li class="site-sections__item">
-          <a class="site-sections__link" href="#">
-            Комплектующие
-          </a>
-        </li>
-        <li class="site-sections__item">
-          <a class="site-sections__link" href="#">
-            Доставка
-          </a>
-        </li>
-        <li class="site-sections__item">
-          <a class="site-sections__link" href="#">
-            Контакты
-          </a>
-        </li>
-      </ul>
+      <span class="accordion-toggle" data-accordion="button"></span>
+      <div class="site-sections__content-wrapper" data-accordion="content">
+        <ul class="site-sections__list">
+          <li class="site-sections__item">
+            <a class="site-sections__link" href="#">
+              О Компании
+            </a>
+          </li>
+          <li class="site-sections__item">
+            <a class="site-sections__link" href="#">
+              Продукты
+            </a>
+          </li>
+          <li class="site-sections__item">
+            <a class="site-sections__link" href="#">
+              Производство печатных плат
+            </a>
+          </li>
+          <li class="site-sections__item">
+            <a class="site-sections__link" href="#">
+              Монтаж печатных плат
+            </a>
+          </li>
+          <li class="site-sections__item">
+            <a class="site-sections__link" href="#">
+              Комплектующие
+            </a>
+          </li>
+          <li class="site-sections__item">
+            <a class="site-sections__link" href="#">
+              Доставка
+            </a>
+          </li>
+          <li class="site-sections__item">
+            <a class="site-sections__link" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="main-footer__contacts contacts">
       <address class="contacts__wrapper" data-accordion="element">
         <h2 class="contacts__title" data-accordion="button">Наш офис</h2>
+        <span class="accordion-toggle" data-accordion="button"></span>
         <div class="contacts__content-wrapper" data-accordion="content">
           <p class="contacts__address">г. Мытищи, Олимпийский проспект, д.10</p>
           <ul class="contacts__list">

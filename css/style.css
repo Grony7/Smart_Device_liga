@@ -739,7 +739,7 @@ button,
   opacity: 0.8;
 }
 
-.contacts__link.focus-visible:active {
+.contacts__link:active {
   opacity: 0.5;
 }
 
@@ -756,7 +756,7 @@ button,
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -806,7 +806,7 @@ button,
   left: 60px;
 }
 
-.feedback__wrapper__title {
+.feedback__title {
   margin: 0 0 12px -5px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -814,7 +814,7 @@ button,
   line-height: 51px;
 }
 
-.feedback__wrapper__text {
+.feedback__text {
   margin: 0 0 33px;
   font-size: 16px;
   line-height: 22px;
@@ -839,6 +839,7 @@ button,
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  margin-bottom: auto;
 }
 
 .feedback__form .form__checkbox {
@@ -1084,8 +1085,8 @@ button,
   color: #00b2ff;
 }
 
-.contacts__phone-number-link.focus-visible:active {
-  color: #ffffff;
+.contacts__phone-number-link:active {
+  opacity: 0.5;
 }
 
 .site-sections {
@@ -1124,8 +1125,8 @@ button,
   color: #00b2ff;
 }
 
-.site-sections__link.focus-visible:active {
-  color: #ffffff;
+.site-sections__link:active {
+  opacity: 0.5;
 }
 
 .social-network {
@@ -1160,7 +1161,7 @@ button,
   fill: #00b2ff;
 }
 
-.social-network__icon.focus-visible:active {
+.social-network__icon:active {
   opacity: 0.5;
 }
 
@@ -1345,10 +1346,6 @@ button,
 .btn:disabled {
   opacity: 0.5;
   pointer-events: none;
-}
-
-.btn.focus-visible:focus {
-  opacity: 0.8;
 }
 
 .btn.focus-visible:active {
@@ -2005,6 +2002,68 @@ button,
   color: #15ab07;
 }
 
+.modal-consultation__content {
+  position: relative;
+  width: 500px;
+  border-radius: 3px;
+  background-color: #00b2ff;
+}
+
+.modal-consultation__title {
+  margin: -2px 0 4px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-consultation__subtitle {
+  width: 400px;
+  margin: 0 0 36px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.modal-consultation__form .form__field {
+  margin: 0 0 18px;
+}
+
+.modal-consultation__form .form__textarea {
+  margin: 0 0 22px;
+}
+
+.modal-consultation__form .form__button {
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+.modal-consultation__form .form__checkbox {
+  margin-left: 8px;
+}
+
+.modal-consultation__button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.modal-consultation__icon-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -2134,6 +2193,7 @@ button,
 
   .main-header {
     position: absolute;
+    width: 100%;
   }
 
   .main-header__wrapper {
@@ -2165,11 +2225,11 @@ button,
     display: none;
   }
 
-  .feedback__wrapper__title {
+  .feedback__title {
     margin: 0 0 7px;
   }
 
-  .feedback__wrapper__text {
+  .feedback__text {
     margin: 0 0 24px;
   }
 
@@ -2254,6 +2314,10 @@ button,
   .main-container__about-company {
     margin-bottom: 80px;
   }
+
+  .modal-consultation {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2281,12 +2345,12 @@ button,
     min-height: auto;
   }
 
-  .feedback__wrapper__title {
+  .feedback__title {
     font-size: 30px;
     line-height: 42px;
   }
 
-  .feedback__wrapper__text {
+  .feedback__text {
     margin: 0 0 32px;
     font-size: 14px;
     line-height: 19px;

@@ -713,7 +713,7 @@ button,
   z-index: 1;
 }
 
-.contacts {
+.connection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,28 +722,29 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 20px;
+  gap: 30px 96px;
+  max-width: 475px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.contacts__link {
+.connection__link {
   position: relative;
   padding: 15px 10px 15px 45px;
   color: #f2f5f7;
   outline: none;
 }
 
-.contacts__link.focus-visible:focus {
+.connection__link.focus-visible:focus {
   opacity: 0.8;
 }
 
-.contacts__link:active {
+.connection__link:active {
   opacity: 0.5;
 }
 
-.contacts__link-icon {
+.connection__link-icon {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -851,8 +852,13 @@ button,
 
 .product-cart {
   position: relative;
+  display: block;
   color: #f2f5f7;
   background-color: #041827;
+}
+
+.product-cart:active {
+  opacity: 0.7;
 }
 
 .product-cart__wrapper {
@@ -1079,6 +1085,7 @@ button,
   font-size: 16px;
   line-height: 25px;
   color: rgba(255, 255, 255, 0.7);
+  outline: none;
 }
 
 .contacts__phone-number-link.focus-visible:focus {
@@ -1119,6 +1126,7 @@ button,
   width: 220px;
   margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.7);
+  outline: none;
 }
 
 .site-sections__link.focus-visible:focus {
@@ -1145,6 +1153,11 @@ button,
   min-width: 40px;
   min-height: 40px;
   padding: 5px;
+  outline: none;
+}
+
+.social-network__link.focus-visible:focus .social-network__icon {
+  fill: #00b2ff;
 }
 
 .social-network__icon {
@@ -1175,7 +1188,7 @@ button,
   display: grid;
   -ms-grid-columns: 1fr minmax(30px, 160px) 470px 30px 345px;
   grid-template-columns: 1fr minmax(30px, 160px) 470px 30px 345px;
-  grid-template-areas: "social-wrapper . site-sections . contacts ";
+  grid-template-areas: " social-wrapper . site-sections . contacts ";
 }
 
 .main-footer__social-wrapper {
@@ -1273,6 +1286,10 @@ button,
   clip-path: inset(100%);
 }
 
+.form__checkbox input.focus-visible:focus ~ .form__custom-checkbox {
+  border-color: #041827;
+}
+
 .form__checkbox label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1341,11 +1358,20 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  outline: none;
 }
 
 .btn:disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.btn.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.btn.focus-visible:focus {
+  outline: 2px solid #df1d1d;
 }
 
 .btn.focus-visible:active {
@@ -1373,6 +1399,11 @@ button,
   color: #00b2ff;
   background-color: #f2f5f7;
   border: 1px solid #00b2ff;
+}
+
+.btn--white.focus-visible:focus {
+  color: #f2f5f7;
+  background-color: #00b2ff;
 }
 
 .modal {
@@ -2118,7 +2149,7 @@ button,
     -ms-grid-columns: 1fr 28px 1fr;
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: auto 32px auto;
-    grid-template-areas: "social-wrapper social-wrapper" "site-sections contacts ";
+    grid-template-areas: "social-wrapper social-wrapper" "site-sections contacts";
     gap: 32px 28px;
   }
 
@@ -2166,20 +2197,22 @@ button,
     padding: 0 50px;
   }
 
-  .contacts {
+  .connection {
+    max-width: 445px;
+    gap: 20px;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
-  .contacts__link {
+  .connection__link {
     display: inline-block;
     min-width: 40px;
     min-height: 40px;
     padding: 10px;
   }
 
-  .contacts__link-icon {
+  .connection__link-icon {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -2187,7 +2220,7 @@ button,
     transform: translate(-50%, -50%);
   }
 
-  .contacts__text {
+  .connection__text {
     display: none;
   }
 
@@ -2333,6 +2366,8 @@ button,
   .main-header__logo-wrapper img {
     width: 35px;
     height: 35px;
+    min-width: 35px;
+    min-height: 35px;
   }
 
   .main-header__contacts {
@@ -2740,8 +2775,14 @@ button,
 }
 
 @media (hover: hover) {
-  .contacts__link:hover:not(.focus-visible) {
+  .connection__link:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .product-cart:hover:not(.focus-visible) {
+    display: block;
+    -webkit-box-shadow: 0 0 12px -2px #ffffff;
+    box-shadow: 0 0 12px -2px #ffffff;
   }
 
   .advantage-card:hover:not(.focus-visible) {
@@ -2770,8 +2811,17 @@ button,
     fill: #00b2ff;
   }
 
+  .form__checkbox input:hover:not(.focus-visible) ~ .form__custom-checkbox {
+    border-color: #041827;
+  }
+
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .btn--white:hover:not(.focus-visible) {
+    color: #f2f5f7;
+    background-color: #00b2ff;
   }
 
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {

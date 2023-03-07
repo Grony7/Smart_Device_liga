@@ -23,14 +23,20 @@
 
   transition: opacity $trans-default;
 
+  outline: none;
+
   &:disabled {
     opacity: 0.5;
 
     pointer-events: none;
   }
 
-  @include hover {
+  @include hover-focus {
     opacity: 0.8;
+  }
+
+  @include focus {
+    outline: 2px solid $color-persian-red;
   }
 
   @include active {
@@ -73,6 +79,12 @@
     background-color: $color-alice-blue;
 
     border: 1px solid $color-deep-sky-blue;
+
+    @include hover-focus {
+      color: $color-alice-blue;
+
+      background-color: $color-deep-sky-blue;
+    }
 
     @include vp-767 {
       min-width: 160px;

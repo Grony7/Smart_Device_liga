@@ -1,5 +1,5 @@
 .form__field input,
-.form__textarea textarea{
+.form__textarea textarea {
   width: 100%;
   padding: 15px;
 
@@ -37,6 +37,12 @@
 
 .form__checkbox input {
   @include visually-hidden;
+
+  @include hover-focus {
+    & ~ .form__custom-checkbox {
+      border-color: $color-black-pearl;
+    }
+  }
 }
 
 .form__checkbox label {
@@ -64,7 +70,7 @@
   border-radius: 2px;
 }
 
-.form__checkbox input:checked  ~ .form__custom-checkbox::after {
+.form__checkbox input:checked ~ .form__custom-checkbox::after {
   content: "";
 
   position: absolute;

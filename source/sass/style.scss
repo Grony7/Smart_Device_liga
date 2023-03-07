@@ -17,9 +17,8 @@
 
 // Blocks
 // ---------------------------------
-@import "blocks/header/contacts";
+@import "blocks/header/connection";
 @import "blocks/header/main-header";
-
 @import "blocks/main/feedback";
 @import "blocks/main/product-cart";
 @import "blocks/main/products";
@@ -28,12 +27,10 @@
 @import "blocks/main/advantages";
 @import "blocks/main/main-block";
 @import "blocks/main/main-container";
-
 @import "blocks/footer/contacts";
 @import "blocks/footer/site-sections";
 @import "blocks/footer/social-network";
 @import "blocks/footer/main-footer";
-
 @import "blocks/accordion-toggle";
 @import "blocks/form";
 @import "blocks/btn";
@@ -41,7 +38,6 @@
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
-
 @import "blocks/modal-сonsultation";
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
@@ -94,5 +90,3 @@
 
 // для любых transition обязательно указывайте transition-property
 // transition: $trans-default ❌ ---> transition: color $trans-default ✅
-
-

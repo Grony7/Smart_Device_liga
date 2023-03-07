@@ -16,6 +16,14 @@
   min-width: 40px;
   min-height: 40px;
   padding: 5px;
+
+  outline: none;
+
+  @include focus {
+    & .social-network__icon {
+      fill: $color-deep-sky-blue;
+    }
+  }
 }
 
 .social-network__icon {

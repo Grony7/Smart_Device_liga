@@ -15,13 +15,13 @@
 .main-footer__wrapper {
   display: grid;
   grid-template-columns: 1fr minmax(30px, 160px) 470px 30px 345px;
-  grid-template-areas: 'social-wrapper . site-sections . contacts ';
+  grid-template-areas: " social-wrapper . site-sections . contacts ";
 
   @include vp-1279 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      'social-wrapper social-wrapper'
-      'site-sections contacts ';
+      "social-wrapper social-wrapper"
+      "site-sections contacts";
     gap: 32px 28px;
   }
 
@@ -33,9 +33,9 @@
   @include vp-767 {
     grid-template-columns: 1fr;
     grid-template-areas:
-    'social-wrapper'
-    'site-sections'
-    'contacts ';
+      "social-wrapper"
+      "site-sections"
+      "contacts ";
     gap: 0;
   }
 }

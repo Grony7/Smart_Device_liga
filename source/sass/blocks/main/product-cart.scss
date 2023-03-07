@@ -1,9 +1,21 @@
 .product-cart {
   position: relative;
 
+  display: block;
+
   color: $color-alice-blue;
 
   background-color: $color-black-pearl;
+
+  @include hover {
+    display: block;
+
+    box-shadow: 0 0 12px -2px $color-default-white;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .product-cart__wrapper {
@@ -56,7 +68,7 @@
 
   background-color: $color-deep-sky-blue;
 
-  @include vp-767{
+  @include vp-767 {
     min-width: 40px;
     min-height: 40px;
   }

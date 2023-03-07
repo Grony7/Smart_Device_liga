@@ -1,21 +1,24 @@
-.contacts {
+.connection {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 30px 96px;
 
+  max-width: 475px;
   padding: 0;
   margin: 0;
 
   list-style: none;
 
   @include vp-1023 {
-    justify-content: end;
+    max-width: 445px;
+    gap: 20px;
+    justify-content: flex-end;
   }
 }
 
-.contacts__link {
+.connection__link {
   position: relative;
 
   padding: 15px 10px 15px 45px;
@@ -32,7 +35,7 @@
     opacity: 0.5;
   }
 
-  @include vp-1023  {
+  @include vp-1023 {
     display: inline-block;
 
     min-width: 40px;
@@ -41,7 +44,7 @@
   }
 }
 
-.contacts__link-icon {
+.connection__link-icon {
   position: absolute;
 
   top: 50%;
@@ -56,8 +59,8 @@
   }
 }
 
-.contacts__text {
-  @include vp-1023  {
+.connection__text {
+  @include vp-1023 {
     display: none;
   }
 }

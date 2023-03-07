@@ -33,7 +33,6 @@
   @include vp-767 {
     display: none;
   }
-
 }
 
 .about-company__title {
@@ -72,8 +71,8 @@
   }
 }
 
-.about-company__content-wrapper:not(.is-active) .about-company__text p:last-of-type{
-    margin: 0;
+.about-company__content-wrapper:not(.is-active) .about-company__text p:last-of-type {
+  margin: 0;
 }
 
 .about-company__text span {

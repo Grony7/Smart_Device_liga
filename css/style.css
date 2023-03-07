@@ -729,7 +729,7 @@ button,
 }
 
 .connection__link.focus-visible:focus {
-  opacity: 0.8;
+  color: #00b2ff;
 }
 
 .connection__link:active {
@@ -2768,7 +2768,7 @@ button,
 
 @media (hover: hover) {
   .connection__link:hover:not(.focus-visible) {
-    opacity: 0.8;
+    color: #00b2ff;
   }
 
   .product-cart:hover:not(.focus-visible) {

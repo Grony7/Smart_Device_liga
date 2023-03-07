@@ -2,8 +2,8 @@ const mainBlockButton = document.querySelector('[data-adaptive="main-block-butto
 const productTitle = document.querySelector('[data-adaptive="products-title"]');
 
 const aboutCompanyTextWrapper = document.querySelector('[data-adaptive="about-company-text-wrapper"]');
-const aboutCompanyAccordionWrapper = document.querySelector('[data-adaptive="about-company-adaptive-text"]');
-const aboutCompanyAdaptiveText = document.querySelector('[data-adaptive="about-company-accordion-wrapper"]');
+const aboutCompanyAccordionWrapper = document.querySelector('[data-adaptive="about-company-accordion-wrapper"]');
+const aboutCompanyAdaptiveText = document.querySelector('[data-adaptive="about-company-adaptive-text"]');
 
 
 const breakpoint = window.matchMedia('(min-width:768px)');
@@ -30,9 +30,9 @@ const breakpointChecker = () => {
     }
 
     if (aboutCompanyTextWrapper && aboutCompanyAccordionWrapper && aboutCompanyAdaptiveText) {
-      if (!aboutCompanyAdaptiveText.classList.contains('js-desktop-version')) {
+      if (aboutCompanyAdaptiveText.classList.contains('is-mobile')) {
         aboutCompanyTextWrapper.insertBefore(aboutCompanyAdaptiveText, aboutCompanyTextWrapper.children[-1]);
-        aboutCompanyAdaptiveText.classList.add('js-desktop-version');
+        aboutCompanyAdaptiveText.classList.remove('is-mobile');
       }
     }
 
@@ -46,9 +46,9 @@ const breakpointChecker = () => {
     }
 
     if (aboutCompanyTextWrapper && aboutCompanyAccordionWrapper && aboutCompanyAdaptiveText) {
-      if (aboutCompanyAdaptiveText.classList.contains('js-desktop-version')) {
+      if (!aboutCompanyAdaptiveText.classList.contains('is-mobile')) {
         aboutCompanyAccordionWrapper.insertBefore(aboutCompanyAdaptiveText, aboutCompanyAccordionWrapper.children[0]);
-        aboutCompanyAdaptiveText.classList.remove('js-desktop-version');
+        aboutCompanyAdaptiveText.classList.add('is-mobile');
       }
     }
   }

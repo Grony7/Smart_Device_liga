@@ -1,0 +1,74 @@
+.modal-consultation {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.modal-consultation__content {
+  position: relative;
+
+  width: 500px;
+
+  border-radius: 3px;
+
+  background-color: $color-deep-sky-blue;
+}
+
+.modal-consultation__title {
+  margin: -2px 0 4px;
+
+  font-family: $font-roboto-condensed;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-consultation__subtitle {
+  width: 400px;
+  margin: 0 0 36px;
+
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.modal-consultation__form .form__field {
+  margin: 0 0 18px;
+}
+
+.modal-consultation__form .form__textarea {
+  margin: 0 0 22px;
+}
+
+.modal-consultation__form .form__button {
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+.modal-consultation__form .form__checkbox {
+  margin-left: 8px;
+}
+
+.modal-consultation__button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+
+  border: none;
+  outline: none;
+  background-color: $color-transparent;
+  cursor: pointer;
+}
+
+.modal-consultation__icon-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  fill: $color-default-white;
+
+  transform: translate(-50%, -50%);
+}

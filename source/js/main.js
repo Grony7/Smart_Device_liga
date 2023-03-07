@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {adaptability} from './modules/adaptive';
-import {statusOfAboutButton} from './modules/about-company-button.js';
+import {statusOfAboutButton} from './modules/about-company.js';
 
 // ---------------------------------
 

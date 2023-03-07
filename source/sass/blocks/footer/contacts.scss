@@ -66,8 +66,8 @@
     color: $color-deep-sky-blue;
   }
 
-  @include active {
-    color: $color-default-white;
+  &:active {
+    opacity: 0.5;
   }
 }
 

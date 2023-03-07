@@ -29,7 +29,7 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
+  @include hover {
     opacity: 0.8;
   }
 

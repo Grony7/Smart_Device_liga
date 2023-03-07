@@ -31,7 +31,7 @@
     fill: $color-deep-sky-blue;
   }
 
-  @include active {
+  &:active {
     opacity: 0.5;
   }
 }

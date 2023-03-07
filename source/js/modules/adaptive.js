@@ -1,11 +1,12 @@
-const mainBlockButton = document.querySelector('#main-block-button');
-const productTitle = document.querySelector('#product-title');
+const mainBlockButton = document.querySelector('[data-adaptive="main-block-button"]');
+const productTitle = document.querySelector('[data-adaptive="products-title"]');
 
-const aboutCompanyTextWrapper = document.querySelector('#about-company-text-wrapper');
-const aboutCompanyAccordionWrapper = document.querySelector('#about-company-accordion-wrapper');
-const aboutCompanyAdaptiveText = document.querySelector('#about-company-adaptive-text');
+const aboutCompanyTextWrapper = document.querySelector('[data-adaptive="about-company-text-wrapper"]');
+const aboutCompanyAccordionWrapper = document.querySelector('[data-adaptive="about-company-adaptive-text"]');
+const aboutCompanyAdaptiveText = document.querySelector('[data-adaptive="about-company-accordion-wrapper"]');
 
-const MOBILE_BREAKPOINTS = 768;
+
+const breakpoint = window.matchMedia('(min-width:768px)');
 
 const MainBlockButtonText = {
   desktop: 'Получить бесплатную консультацию',
@@ -17,26 +18,9 @@ const productTitleText = {
   mobile: 'Товары и услуги Smart&nbsp;Device',
 };
 
-const dynamicAdaptation = () => {
-  const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+const breakpointChecker = () => {
 
-  if (viewportWidth < MOBILE_BREAKPOINTS) {
-    if (mainBlockButton && mainBlockButton.innerHTML !== MainBlockButtonText.mobile) {
-      mainBlockButton.innerHTML = MainBlockButtonText.mobile;
-    }
-
-    if (productTitle && mainBlockButton.innerHTML !== productTitleText.mobile) {
-      productTitle.innerHTML = productTitleText.mobile;
-    }
-
-    if (aboutCompanyTextWrapper && aboutCompanyAccordionWrapper && aboutCompanyAdaptiveText) {
-      if (aboutCompanyAdaptiveText.classList.contains('js-desktop-version')) {
-        aboutCompanyAccordionWrapper.insertBefore(aboutCompanyAdaptiveText, aboutCompanyAccordionWrapper.children[0]);
-        aboutCompanyAdaptiveText.classList.remove('js-desktop-version');
-      }
-    }
-
-  } else {
+  if (breakpoint.matches) {
     if (mainBlockButton && mainBlockButton.innerHTML !== MainBlockButtonText.desktop) {
       mainBlockButton.innerHTML = MainBlockButtonText.desktop;
     }
@@ -51,10 +35,26 @@ const dynamicAdaptation = () => {
         aboutCompanyAdaptiveText.classList.add('js-desktop-version');
       }
     }
+
+  } else {
+    if (mainBlockButton && mainBlockButton.innerHTML !== MainBlockButtonText.mobile) {
+      mainBlockButton.innerHTML = MainBlockButtonText.mobile;
+    }
+
+    if (productTitle && mainBlockButton.innerHTML !== productTitleText.mobile) {
+      productTitle.innerHTML = productTitleText.mobile;
+    }
+
+    if (aboutCompanyTextWrapper && aboutCompanyAccordionWrapper && aboutCompanyAdaptiveText) {
+      if (aboutCompanyAdaptiveText.classList.contains('js-desktop-version')) {
+        aboutCompanyAccordionWrapper.insertBefore(aboutCompanyAdaptiveText, aboutCompanyAccordionWrapper.children[0]);
+        aboutCompanyAdaptiveText.classList.remove('js-desktop-version');
+      }
+    }
   }
 };
 
 export const adaptability = () => {
-  dynamicAdaptation();
-  window.addEventListener('resize', dynamicAdaptation);
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
 };

@@ -42,9 +42,7 @@
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
 
-
-
-// ---------------------------------
+@import "blocks/modal-сonsultation";
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
 
@@ -96,3 +94,5 @@
 
 // для любых transition обязательно указывайте transition-property
 // transition: $trans-default ❌ ---> transition: color $trans-default ✅
+
+

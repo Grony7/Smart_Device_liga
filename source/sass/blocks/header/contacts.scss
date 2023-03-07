@@ -28,7 +28,7 @@
     opacity: 0.8;
   }
 
-  @include active {
+  &:active {
     opacity: 0.5;
   }
 

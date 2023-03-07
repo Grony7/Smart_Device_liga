@@ -36,7 +36,7 @@
         </a>
       </li>
     </ul>
-    <button class="main-header__button btn btn--border ">Заказать звонок</button>
+    <button class="main-header__button btn btn--border" data-open-modal="сonsultation">Заказать звонок</button>
   </div>
 </header>
 <main class="main-container">
@@ -61,7 +61,8 @@
     <div class="main-block__wrapper container">
       <h2 class="main-block__title">Печатные платы</h2>
       <p class="main-block__text">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-      <a class="main-block__button btn btn--blue" href="#feedback" id="main-block-button">Получить бесплатную консультацию</a>
+      <a class="main-block__button btn btn--blue" href="#feedback" data-adaptive="main-block-button">Получить бесплатную
+        консультацию</a>
     </div>
   </section>
 
@@ -127,23 +128,24 @@
         </picture>
 
         <h2 class="about-company__title">О компании</h2>
-        <div class="about-company__text" >
+        <div class="about-company__text">
           <p>
             Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
             технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
           </p>
 
-          <p id="about-company-text-wrapper">
+          <p data-adaptive="about-company-text-wrapper">
             Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
             REFOND.
-            <span class="js-desktop-version" id="about-company-adaptive-text">
+            <span class="js-desktop-version" data-adaptive="about-company-adaptive-text">
               Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных
             Дорог
             (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
               светотехники России.
             </span>
           </p>
-          <div class="about-company__accordion-wrapper" id="about-company-accordion-wrapper" data-accordion="content">
+          <div class="about-company__accordion-wrapper" data-adaptive="about-company-accordion-wrapper"
+               data-accordion="content">
             <p>
               Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов,
               70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более
@@ -157,14 +159,15 @@
           </div>
 
         </div>
-        <button class="about-company__button btn btn--white" id="about-company-button" data-accordion="button">Подробнее</button>
+        <button class="about-company__button btn btn--white" data-about="button" data-accordion="button">Подробнее
+        </button>
       </div>
     </div>
   </section>
 
   <section class="main-container__products products">
     <div class="products__wrapper container">
-      <h2 class="products__title" id="product-title">Smart Device предлагает следующие товары и услуги</h2>
+      <h2 class="products__title" data-adaptive="products-title">Smart Device предлагает следующие товары и услуги</h2>
       <ul class="products__list">
         <li class="products__item">
           <a class="products__product-cart product-cart" href="#">
@@ -269,29 +272,36 @@
              srcset="img/feedback-image/paper-airplane.png, img/feedback-image/paper-airplane@2x.png 2x">
       </picture>
       <div class="feedback__content-wrapper">
-        <h2 class="feedback__wrapper__title">Остались вопросы? Задайте их нам!</h2>
-        <p class="feedback__wrapper__text">Мы проконсультируем Вас бесплатно</p>
+        <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+        <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
 
-        <form class="feedback__form form">
-          <div class="form__field">
-            <input type="text" placeholder="Имя" aria-label="Имя" required>
-          </div>
-          <div class="form__field">
-            <input type="tel" placeholder="Телефон" aria-label="Телефон" required>
-          </div>
-          <div class="form__textarea">
-            <textarea placeholder="Ваш вопрос" aria-label="Ваш вопрос" required></textarea>
-          </div>
+        <div class="feedback__form-wrapper" data-form-validate="" data-callback="base">
+          <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="get">
+            <div class="form__field" data-validate-type="text" data-limitation="name"
+                 data-message-base="Поле обязательно к заполнению"
+                 data-message-extra="Проверьте корректность заполнения поля" data-required>
+              <input type="text" placeholder="Имя" aria-label="Имя" name="name" minlength="3" required>
+            </div>
+            <div class="form__field" data-validate-type="phone" data-on-input-validate,
+                 data-message-base="Поле обязательно к заполнению"
+                 data-message-extra="Проверьте корректность заполнения поля"
+                 data-required>
+              <input type="tel" placeholder="Телефон" aria-label="Телефон" name="tel" required>
+            </div>
+            <div class="form__textarea" data-message-base="Поле обязательно к заполнению">
+              <textarea placeholder="Ваш вопрос" aria-label="Ваш вопрос" name="question" required minlength="7"></textarea>
+            </div>
 
-          <button class="form__button btn">Задать вопрос</button>
-          <div class="form__checkbox">
-            <label>
-              <input type="checkbox" required>
-              <span class="form__custom-checkbox"></span>
-              Я согласен на обработку персональных данных
-            </label>
-          </div>
-        </form>
+            <button class="form__button btn" type="submit">Задать вопрос</button>
+            <div class="form__checkbox" data-validate-type="checkbox" data-message-base="Подтвердите согласие на обработку данных">
+              <label>
+                <input type="checkbox" name="approval" required>
+                <span class="form__custom-checkbox"></span>
+                Я согласен на обработку персональных данных
+              </label>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -395,6 +405,52 @@
     </div>
   </div>
 </footer>
+
+
+<div class="modal-consultation modal modal--preload " data-modal="сonsultation">
+  <div class="modal-consultation__wrapper modal__wrapper">
+    <div class="modal-consultation__overlay modal__overlay" data-close-modal></div>
+    <div class="modal-consultation__content modal__content">
+      <h2 class="modal-consultation__title">Закажите звонок</h2>
+      <p class="modal-consultation__subtitle">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное
+        время</p>
+      <div class="modal-consultation__form-wrapper" data-form-validate="" data-callback="base">
+        <form class="modal-consultation__form form" action="https://echo.htmlacademy.ru" method="get">
+          <div class="form__field" data-validate-type="text" data-limitation="name"
+               data-message-base="Поле обязательно к заполнению"
+               data-message-extra="Проверьте корректность заполнения поля" data-required>
+            <input type="text" placeholder="Имя" aria-label="Имя" required minlength="3" name="name" data-focus>
+          </div>
+          <div class="form__field" data-validate-type="phone" data-on-input-validate,
+               data-message-base="Поле обязательно к заполнению"
+               data-message-extra="Проверьте корректность заполнения поля"
+               data-required>
+            <input type="tel" placeholder="Телефон" aria-label="Телефон" name="tel" required>
+          </div>
+          <div class="form__textarea" data-validate-type="text" data-message-base="Поле обязательно к заполнению">
+            <textarea placeholder="Ваш вопрос" aria-label="Ваш вопрос" minlength="7" name="question" required></textarea>
+          </div>
+
+          <button class="form__button btn" type="submit">Отправить</button>
+          <div class="form__checkbox" data-validate-type="checkbox" data-message-base="Подтвердите согласие на обработку данных">
+            <label>
+              <input type="checkbox" name="approval" required>
+              <span class="form__custom-checkbox"></span>
+              Я согласен на обработку персональных данных
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <button class="modal-consultation__button" type="button" aria-label="Закрыть попап" data-close-modal>
+        <svg class="modal-consultation__icon-close" aria-hidden="true" focusable="false" width="20" height="20">
+          <use xlink:href="img/sprite.svg#icon-close"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
 
 <script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>

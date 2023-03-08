@@ -3,9 +3,24 @@
 
   display: block;
 
+  min-height: 650px;
+  padding: 50px 40px;
+
+  z-index: 2;
+
   color: $color-alice-blue;
 
   background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    padding: 40px 45px;
+
+    min-height: 250px;
+  }
+
+  @include vp-767 {
+    padding: 30px;
+  }
 
   @include hover {
     display: block;
@@ -18,32 +33,11 @@
   }
 }
 
-.product-cart__wrapper {
-  position: relative;
-
-  display: block;
-
-  min-height: 650px;
-  padding: 50px 40px;
-
-  z-index: 2;
-
-  @include vp-1023 {
-    padding: 40px 45px;
-
-    min-height: 250px;
-  }
-
-  @include vp-767 {
-    padding: 30px;
-  }
-}
-
 .product-cart__background {
   z-index: -1;
 }
 
-.product-cart__title {
+.product-cart h3 {
   max-width: 190px;
   margin: 0;
 

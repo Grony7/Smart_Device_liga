@@ -9,7 +9,7 @@
   list-style: none;
 }
 
-.social-network__link {
+.social-network a {
   position: relative;
 
   display: inline-block;
@@ -27,7 +27,7 @@
   }
 }
 
-.social-network__icon {
+.social-network svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -43,4 +43,8 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+.social-network span {
+  @include visually-hidden;
 }

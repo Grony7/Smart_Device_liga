@@ -2,24 +2,22 @@
   color: $color-black-pearl;
 }
 
-.about-company__content-wrapper {
+.about-company__wrapper {
   position: relative;
 
   min-height: 320px;
-  padding-left: 250px;
+  padding-left: 310px;
   padding-bottom: 20px;
 
   background-color: $color-transparent;
 
   @include vp-1023 {
-    padding-left: 175px;
+    padding-left: 225px;
     padding-bottom: 0;
   }
 
   @include vp-767 {
     min-height: auto;
-
-    padding: 0;
 
     background-image: none;
   }
@@ -28,14 +26,18 @@
 .about-company__image {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 60px;
+
+  @include vp-1023 {
+    left: 50px;
+  }
 
   @include vp-767 {
     display: none;
   }
 }
 
-.about-company__title {
+.about-company h2 {
   margin: 0 0 10px;
 
   font-family: $font-roboto-condensed;
@@ -71,7 +73,7 @@
   }
 }
 
-.about-company__content-wrapper:not(.is-active) .about-company__text p:last-of-type {
+.about-company__wrapper:not(.is-active) .about-company__text p:last-of-type {
   margin: 0;
 }
 

@@ -18,7 +18,7 @@
   }
 }
 
-.connection__link {
+.connection a {
   position: relative;
 
   padding: 15px 10px 15px 45px;
@@ -59,8 +59,8 @@
   }
 }
 
-.connection__text {
+.connection__item span {
   @include vp-1023 {
-    display: none;
+    @include visually-hidden;
   }
 }

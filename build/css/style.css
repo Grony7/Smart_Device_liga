@@ -480,7 +480,7 @@ html {
   font-size: 16px;
   line-height: 24px;
   font-family: "PT Mono", "Arial", sans-serif;
-  color: #F8FDFF;
+  color: #f8fdff;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -731,7 +731,7 @@ button,
 .connection a {
   position: relative;
   padding: 15px 10px 15px 45px;
-  color: #F8FDFF;
+  color: #f8fdff;
   outline: none;
 }
 
@@ -874,7 +874,7 @@ button,
   min-height: 650px;
   padding: 50px 40px;
   z-index: 2;
-  color: #F8FDFF;
+  color: #f8fdff;
   background-color: #041827;
 }
 
@@ -1260,7 +1260,7 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #F8FDFF;
+  color: #f8fdff;
   outline: none;
   border-radius: 3px;
   border: none;
@@ -1348,7 +1348,7 @@ button,
   width: 15px;
   height: 15px;
   margin-right: 11px;
-  border: 1px solid #F8FDFF;
+  border: 1px solid #f8fdff;
   border-radius: 2px;
 }
 
@@ -1359,8 +1359,8 @@ button,
   left: 5px;
   width: 4px;
   height: 7px;
-  border-bottom: 1px solid #F8FDFF;
-  border-right: 1px solid #F8FDFF;
+  border-bottom: 1px solid #f8fdff;
+  border-right: 1px solid #f8fdff;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -1384,7 +1384,7 @@ button,
   line-height: 19px;
   text-transform: uppercase;
   text-align: center;
-  color: #F8FDFF;
+  color: #f8fdff;
   letter-spacing: 0.05em;
   background-color: #041827;
   border-radius: 3px;
@@ -1416,7 +1416,7 @@ button,
 .btn--border {
   padding: 10px 15px;
   font-size: 14px;
-  border: 1px solid #F8FDFF;
+  border: 1px solid #f8fdff;
 }
 
 .btn--blue {
@@ -1432,12 +1432,12 @@ button,
   font-size: 14px;
   line-height: 16px;
   color: #00b2ff;
-  background-color: #F8FDFF;
+  background-color: #f8fdff;
   border: 1px solid #00b2ff;
 }
 
 .btn--white.focus-visible:focus {
-  color: #F8FDFF;
+  color: #f8fdff;
   background-color: #00b2ff;
 }
 
@@ -2721,12 +2721,12 @@ button,
   }
 
   .advantage-card:hover:not(.focus-visible) .advantage-card__icon {
-    fill: #F8FDFF;
+    fill: #f8fdff;
   }
 
   .advantage-card:hover:not(.focus-visible) h3,
   .advantage-card:hover:not(.focus-visible) p {
-    color: #F8FDFF;
+    color: #f8fdff;
   }
 
   .contacts__content-wrapper a:hover:not(.focus-visible) {
@@ -2750,7 +2750,7 @@ button,
   }
 
   .btn--white:hover:not(.focus-visible) {
-    color: #F8FDFF;
+    color: #f8fdff;
     background-color: #00b2ff;
   }
 

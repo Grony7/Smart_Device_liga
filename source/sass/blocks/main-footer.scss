@@ -74,7 +74,7 @@
   grid-area: site-sections;
 
   @include vp-1279 {
-    margin: 0 0 0 auto;
+    margin: 0;
   }
 
   @include vp-767 {
@@ -85,6 +85,14 @@
 
 .main-footer__contacts {
   grid-area: contacts;
+
+  @include vp-1279 {
+    margin: 0 0 0 auto;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
 }
 
 .main-footer__logo {

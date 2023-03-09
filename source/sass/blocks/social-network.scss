@@ -21,7 +21,7 @@
   outline: none;
 
   @include focus {
-    & .social-network__icon {
+    & svg {
       fill: $color-deep-sky-blue;
     }
   }

@@ -63,6 +63,7 @@
 }
 
 .main-header__button {
+  max-width: 160px;
   margin-right: 5%;
 
   @include vp-1023 {

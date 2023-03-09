@@ -47,7 +47,7 @@
 
   <section class="main-container__main-block main-block">
     <picture>
-      <source type="image/webp" media="(max-width: 787px)"
+      <source type="image/webp" media="(max-width: 767px)"
               srcset="img/main-block/background-mobile.webp, img/main-block/background-mobile@2x.webp 2x">
       <source type="image/webp" media="(max-width: 1023px)"
               srcset="img/main-block/background-tablet.webp, img/main-block/background-tablet@2x.webp 2x">
@@ -257,13 +257,17 @@
           <div class="form__textarea" data-message-base="Поле обязательно к заполнению">
             <textarea placeholder="Ваш вопрос" aria-label="Ваш вопрос" name="question" required></textarea>
           </div>
-          <button class="form__button btn" type="submit">Задать вопрос</button>
-          <div class="form__checkbox" data-validate-type="checkbox" data-message-base="Подтвердите согласие на обработку данных">
-            <label>
-              <input type="checkbox" name="approval" required>
-              <span class="form__custom-checkbox"></span>
-              Я согласен на обработку персональных данных
-            </label>
+
+          <div class="form__button-wrapper">
+            <div class="form__checkbox" data-validate-type="checkbox" data-message-base="Подтвердите согласие на обработку данных">
+              <label>
+                <input type="checkbox" name="approval" required>
+                <span class="form__custom-checkbox"></span>
+                Я согласен на обработку персональных данных
+              </label>
+            </div>
+
+            <button class="form__button btn" type="submit">Задать вопрос</button>
           </div>
         </form>
       </div>
@@ -278,7 +282,7 @@
       <ul class="main-footer__social-network social-network">
         <li class="social-network__item">
           <a href="#">
-            <svg class="social-network__icon" aria-hidden="true" focusable="false" width="30" height="30">
+            <svg aria-hidden="true" focusable="false" width="30" height="30">
               <use xlink:href="img/sprite.svg#icon-ok"></use>
             </svg>
             <span>Ссылка на одноклассники</span>
@@ -286,7 +290,7 @@
         </li>
         <li class="social-network__item">
           <a href="#">
-            <svg  aria-hidden="true" focusable="false" width="30" height="30">
+            <svg aria-hidden="true" focusable="false" width="30" height="30">
               <use xlink:href="img/sprite.svg#icon-vk"></use>
             </svg>
             <span>Ссылка на вконтакте</span>
@@ -389,13 +393,16 @@
             <textarea placeholder="Ваш вопрос" aria-label="Ваш вопрос" name="question" required></textarea>
           </div>
 
-          <button class="form__button btn" type="submit">Отправить</button>
-          <div class="form__checkbox" data-validate-type="checkbox" data-message-base="Подтвердите согласие на обработку данных">
-            <label>
-              <input type="checkbox" name="approval" required>
-              <span class="form__custom-checkbox"></span>
-              Я согласен на обработку персональных данных
-            </label>
+          <div class="form__button-wrapper">
+            <div class="form__checkbox" data-validate-type="checkbox" data-message-base="Подтвердите согласие на обработку данных">
+              <label>
+                <input type="checkbox" name="approval" required>
+                <span class="form__custom-checkbox"></span>
+                Я согласен на обработку персональных данных
+              </label>
+            </div>
+
+            <button class="form__button btn" type="submit">Отправить</button>
           </div>
         </form>
 

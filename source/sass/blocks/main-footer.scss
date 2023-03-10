@@ -3,7 +3,7 @@
 
   background-color: $color-black-pearl;
 
-  @include vp-1279 {
+  @include vp-1023 {
     padding: 50px 0 65px;
   }
 
@@ -14,10 +14,10 @@
 
 .main-footer__wrapper {
   display: grid;
-  grid-template-columns: 1fr minmax(30px, 160px) 470px 30px 345px;
+  grid-template-columns: auto minmax(30px, 160px) 1fr 30px 345px;
   grid-template-areas: " social-wrapper . site-sections . contacts ";
 
-  @include vp-1279 {
+  @include vp-1023 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "social-wrapper social-wrapper"
@@ -44,7 +44,7 @@
   min-width: 215px;
   grid-area: social-wrapper;
 
-  @include vp-1279 {
+  @include vp-1023 {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -61,7 +61,7 @@
 }
 
 .main-footer__social-network {
-  @include vp-1279 {
+  @include vp-1023 {
     margin: 5px 0 auto;
   }
 
@@ -73,7 +73,7 @@
 .main-footer__site-sections {
   grid-area: site-sections;
 
-  @include vp-1279 {
+  @include vp-1023 {
     margin: 0;
   }
 
@@ -86,7 +86,7 @@
 .main-footer__contacts {
   grid-area: contacts;
 
-  @include vp-1279 {
+  @include vp-1023 {
     margin: 0 0 0 auto;
   }
 
@@ -98,7 +98,7 @@
 .main-footer__logo {
   margin: 0 0 30px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     margin: 0;
   }
 }
